@@ -5,7 +5,8 @@
  micamente a ela.
 
 ##----------- como chamar as funcções? ---------
- ```$data = [
+ ```
+ $data = [
       "cor" => "branco",
       "casa" => [
           "numero" => 123,
@@ -14,10 +15,12 @@
       "arco_iris" =>[
           "amarelo", "vermelho", "roxo", "cinza", "violeta"
       ]
- ]```
+ ]
+ ```
 
-
-```Render::template("services/analise/consultor/paper.html")->view($data);```
+```
+Render::template("services/analise/consultor/paper.html")->view($data);
+```
  
  a cima vemos a forma padraõ de chamada do render para fazer o dinamismo nas paginas,
  primeiro se chama o metodo estatico "template" onde é a localizaçaõ do arquivo que
@@ -38,13 +41,17 @@
 
  Caso queira iterar uma lista ou uma array basta fazer o seguinte:
 
-```{{(casa)->
+```
+{{(casa)->
        <li>{{numero}}</li>
        <li>{{endereco}}</li>
- }}```
+ }}
+ ```
 
  caso seja, uma array simples basta colocar "{{it}}" e ele vai traver todos os valores
 
-```{{(arco_iris)->
+```
+{{(arco_iris)->
        <li>{{it}}</li>
- }}```
+ }}
+ ```
